@@ -44,7 +44,7 @@ public abstract class Item {
 	}
 	
 	// Check if the two items are equal by comparing their attributes.
-	public boolean equal(Object obj) {
+	public boolean equals(Object obj) {
 		if (this == obj) return true;
 		if (obj == null || getClass() != obj.getClass()) return false;
 		Item item = (Item) obj;
