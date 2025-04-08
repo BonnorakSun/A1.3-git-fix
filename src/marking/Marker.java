@@ -13,6 +13,7 @@ public class Marker {
 		//you should NOT be able to make an Item - following line shouldn't compile if uncommented
 		//new Item(0, 0, 0);
 		
+		/*
 		System.out.println(Apples.getGenerationCount()); // should print 0
 		Apples a = new Apples();
 		System.out.println(Apples.getGenerationCount()); // should print 1
@@ -30,11 +31,12 @@ public class Marker {
 		System.out.println(new Weed()); // should print "#"
 		System.out.println(new UntilledSoil()); // should print "/"	
 		System.out.println(testItem);
+		*/
 		
 		// Section TWO
 		// uncomment this section once you get to it
 		
-		
+		/*
 		Field testField = new Field(5, 5);
 		System.out.println(testField.get(3, 3)); //should print "."
 		System.out.println(testField); //should print the field
@@ -51,13 +53,13 @@ public class Marker {
 		testField.plant(0, 0, apple);
 		testField.tick();
 		System.out.println(testField.getSummary());
-		
+		*/
 
 		// Section THREE
 		// uncomment this section once you get to it
 		//remember, your farm should work on varies size fields (assuming all fields are less than 10x10)
-		//Farm f = new Farm(10, 5, 10);
-		//f.run();
+		Farm f = new Farm(10, 5, 100);
+		f.run();
 		
 	}
 
