@@ -18,6 +18,10 @@ public class Apples extends Food{
 		return generationCount;
 	}
 	
+	public void tick() {
+		age++;
+		System.out.println("Apple Age: " + age);
+	}
 	
 	public String toString() {
 		return age < maturationAge ? "a" : "A";

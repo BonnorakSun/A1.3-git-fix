@@ -1,7 +1,7 @@
 package students.items;
 
 /**
- * An item track it age, death age, maturation age and monetaryValue.
+ * An item track it age, death age, maturation age, Fertilizer and monetaryValue.
  * Items start at age 0, and their properties are set via constructor.
  * This class should not be instantiated directly.
  */
@@ -11,6 +11,7 @@ public abstract class Item {
 	protected final int maturationAge;
 	protected final int deathAge;
 	protected final int monetaryValue;
+	protected boolean isFertilized;
 	
 	// * Constructor to initialize an Item.
 	public Item(int maturationAge,int deathAge,int monetaryValue) {
@@ -18,6 +19,7 @@ public abstract class Item {
 		this.maturationAge = maturationAge;
 		this.deathAge = deathAge;
 		this.monetaryValue = monetaryValue;
+		this.isFertilized = false;
 	}
 	
 	// Increase the age of the item by 1.
@@ -28,6 +30,10 @@ public abstract class Item {
 	// set the age of the item.
 	public void setAge(int age) {
 		this.age = age;
+	}
+	
+	public int getAge() {
+		return age;
 	}
 	
 	// Check if the item has died. 
@@ -41,6 +47,18 @@ public abstract class Item {
 	 */
 	public int getValue() {
 		return age >= maturationAge ? monetaryValue : 0;
+	}
+	
+	public boolean isMature() {
+		return age >= maturationAge && age <= deathAge;
+	}
+	
+	public void fertilized() {
+		this.isFertilized = true;
+	}
+	
+	public boolean isFertilized() {
+		return isFertilized;
 	}
 	
 	// Check if the two items are equal by comparing their attributes.

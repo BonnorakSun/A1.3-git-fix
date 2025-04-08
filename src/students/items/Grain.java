@@ -18,6 +18,11 @@ public class Grain extends Food{
 		return generationCount;
 	}
 	
+	public void tick() {
+		age++;
+		System.out.println("Grain Age: " + age);
+	}
+	
 	public String toString() {
 		return age < maturationAge ? "g" : "G";
 	}
